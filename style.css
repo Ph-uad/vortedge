@@ -1,3 +1,6 @@
+:root {
+  --primary: #459af0 !important;
+}
 html {
   height: 100%;
   width: 100%;
@@ -7,27 +10,31 @@ html {
 
 body {
   width: 100vw;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 .heading-secondary {
   color: var(--primary);
 }
 
-[role=button-secondary], .button-secondary{
-    color: var(--primary) !important;
-    background: transparent !important;
-    border: 1px solid var(--primary);
-    padding: .4rem 1rem;
-    border-radius: 15rem;
+[role="button-secondary"],
+.button-secondary {
+  color: var(--primary) !important;
+  background: transparent !important;
+  border: 1px solid var(--primary);
+  padding: 0.4rem 1rem;
+  border-radius: 15rem;
 
-    transition: all .3s ease-in-out;
-}
-[role=button-secondary]:hover, .button-secondary:hover{
-    background: #b2b2b2 !important;
-    color:cornsilk !important;
+  transition: all 0.3s ease-in-out;
 }
 
+[role="button-secondary"]:hover,
+.button-secondary:hover {
+  background: #b2b2b2 !important;
+  color: cornsilk !important;
+}
+
+/* Layout */
 .header-container {
   height: 93vh;
   width: 100vw;
@@ -39,6 +46,13 @@ body {
   margin: 0%;
 }
 
+/* .main-container {
+  width: 100vw;
+  padding: 0 10%;
+  margin: 0%;
+  background-color: red !important;
+} */
+
 .header-container > div {
   max-width: 30rem;
   /* From https://css.glass */
@@ -48,6 +62,19 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2.7px);
   -webkit-backdrop-filter: blur(2.7px);
+}
+
+@media (max-width: 800px) {
+  .header-container {
+    background: url(./assets/img/hero.webp) top right/cover no-repeat fixed;
+    padding: 0%;
+  }
+  .header-container > div {
+    width: 100vw;
+    height: 100%;
+    padding: 45% 5%;
+    background: rgba(0, 0, 0, 0.597);
+  }
 }
 
 .header-container > div > h1 {
@@ -64,29 +91,65 @@ body {
   display: block;
 }
 
-.grid > article {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2.7px);
-  -webkit-backdrop-filter: blur(2.7px);
-  border: 4px solid #459af034;
+.card-flex {
+  width: 90vw;
+  padding: 2rem 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x: auto;
+  gap: 2rem;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
 }
 
+.card-flex > article {
+  flex: 1 0 48%;
+  padding:1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  margin: 0% auto !important;
+  backdrop-filter: blur(2.7px);
+  -webkit-backdrop-filter: blur(2.7px);
+  border: 2px solid #459af034;
 
-footer, .align-right{
+  transition: all 0.3s ease-in-out;
+}
+
+.card-flex > article:hover {
+  cursor: none;
+  border: 2px solid #459af0;
+  box-shadow: 0 4px 30px #afcdeb2b;
+}
+
+.contact-button {
+  display: block !important;
+  margin: 0 auto !important;
+  width: fit-content !important;
+}
+
+footer,
+.align-right {
   text-align: right !important;
   margin-left: auto !important;
 }
 
+#steam-up > figure > img {
+  max-height: 40vh;
+  width: 100vw;
+  opacity: 0.9;
+  object-position: top center;
+  object-fit: cover;
+  padding: 1rem;
+  border-radius: 2.5rem;
+}
 
+@media screen and (min-width: 908px) {
+  .card-flex {
+    width: 70vw;
+  }
 
-#steam-up > figure > img{
-    max-height: 40vh; 
-    width: 100vw;
-    opacity: 0.9;
-    object-position: top center;
-    object-fit:cover;
-    padding: 1rem;
-    border-radius: 2.5rem;
+  .card-flex > article {
+    flex: 0 0 45%;
+  }
 }
