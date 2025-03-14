@@ -1,19 +1,29 @@
 @media (prefers-color-scheme: dark) {
-    :root {
-      --primary: #459af0 !important;
-    }
-
-    body{
-        background: #1a1a1a;
-    }
-
-    .header-container {
-        background:  top center/cover no-repeat fixed;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.8)), url(./assets/img/hero-dark.webp) ;
-      }
-
-    .header-container > div{
-        box-shadow: none;
-      }
+  :root {
+    --primary: #459af0 !important;
+    --default-text-color: #ededed;
   }
 
+  body {
+    background: #0b1c28;
+  }
+
+  .header{
+    background: top center/cover no-repeat fixed;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.8)),
+      url(./assets/img/hero-dark.webp);
+  }
+
+  .header-container > div {
+    box-shadow: none;
+  }
+
+  .business {
+    background-image: radial-gradient(circle, #16161631 0%, transparent 20%), url(./assets/img/bg.svg);
+  } 
+
+  .footnote {
+    background: #ededed;
+    color: #010101;
+  }
+}

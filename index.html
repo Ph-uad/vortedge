@@ -6,39 +6,31 @@
     <title>VortEdge - AI & Industry 4.0 Solutions</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style-dark.css" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
-    />
+    /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz@10..72&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
-    /> -->
+    />
   </head>
 
   <body>
     <!-- Navigation -->
     <nav class="container-fluid nav">
-      <ul>
-        <a href="">
-          <li><strong>VortEdge</strong></li>
-        </a>
-      </ul>
-      <ul>
-        <!-- <li><a href="#about">About</a></li>
-            <li><a href="#steam-up"><em style="color: #459af0;"> STEAM UP NIGERIA </em> today.
-      </p> 2025</a></li> -->
-        <li class="button-secondary">
-          <a href="#contact" role="secondary-button">Get Involved</a>
-        </li>
-      </ul>
+      <a href="" class="links">
+        <strong>VortEdge</strong>
+      </a>
+
+      <a href="#contact" role="nav-link" class="links">Get Involved</a>
     </nav>
 
     <!-- Hero Section -->
-    <header class="header-container">
-      <div class="">
+    <header class="header">
+      <div class="header-container">
         <h1 class="heading-primary">Pioneering Industry 4.0 & AI Innovation</h1>
         <!-- <p class="">
           Transforming industries with AI hardware, edge computing, and smart
@@ -47,5 +39,165 @@
         <a href="#solutions" role="button">Explore Our Solutions</a>
       </div>
     </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="about-container">
+        <div class="">
+          <h2 class="heading-primary">About Us</h2>
+          <p>
+            VortEdge specializes in AI hardware, industry 4.0 solutions, and
+            edge computing. We enable smart manufaturing, Internet of Medical
+            Things (IoMT), and industrial automation. Vortedge empowers
+            organization with real time data processing and AI predictive
+            analytics.
+          </p>
+        </div>
+        <figure class="">
+          <img src="./assets/img/embeded-systems.webp" alt="Manufacturing" />
+        </figure>
+      </div>
+      <div class="about-container">
+        <div class="">
+          <p class="offset-header">Our</p>
+          <h1 class="heading-primary">Mission</h1>
+          <p>
+            is to make AI products scalabale, accessible, and affordable during
+            the future of intelligent industries globally.
+          </p>
+
+          <!-- <button>Learn More</button> -->
+        </div>
+        <figure class="">
+          <img src="./assets/img/global-web.webp" alt="Manufacturing" />
+        </figure>
+      </div>
+      <!-- <div class="about-container">
+      <div class="">
+        <h2 class="heading-secondary">About Us</h2>
+        <p>
+          VortEdge specializes in AI hardware, industry 4.0 solutions, and edge
+          computing. We enable smart manufaturing, Internet of Medical Things
+          (IoMT), and industrial automation. Vortedge empowers organization with
+          real time data processing and AI predictive analytics.
+        </p>
+      </div>
+      <figure class="">
+        <img src="./assets/img/manufactoring.webp" alt="Manufacturing" />
+      </figure>
+    </div> -->
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="business">
+      <div class="business-section">
+        <!-- <img
+          src="data:image/png;base64,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"
+          alt="bullish"
+        /> -->
+        <h2 class="heading-secondary">Why is STEAM UP NIGERIA ?</h2>
+        <p>
+          Steam Up Nigeria is a joint initiative of VortEdge and Think Lab to
+          create AI driven markerspace that empowers young innovatiors in
+          Nigeria.
+        </p>
+      </div>
+
+      <div class="business-section">
+        <h2 class="heading-secondary">Why Nigeria</h2>
+        <p>
+          with 70% of it's 200M+ population undder 35 Nigeria is poised to
+          become Africa's leading AI innovation hub
+        </p>
+
+        <button>see more</button>
+      </div>
+
+      <div class="business-section">
+        <h2 class="heading-secondary">Scaling from Local to Global</h2>
+        <ul>
+          <li>
+            <p>
+              <strong>Phase 1: </strong>
+              <span
+                >Build AI marketspace in Lagos, ABuja, and Portharcourt</span
+              >
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Phase 2: </strong>
+              <span
+                >Build AI marketspace in Lagos, ABuja, and Portharcourt</span
+              >
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Phase 3: </strong>
+              <span>Create a global AI onnovation network</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footnote">
+      <p>Transform industries with</p>
+      <p>
+        <strong>AI hardware, Edge Computing, and Smart manufacturing</strong>
+        solutions.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="footer flex" id="contact">
+      <div>
+        <figure>
+          <figcaption>Logo</figcaption>
+        </figure>
+      </div>
+      <form
+        class="form-grid"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
+        <!-- <h3 class="heading-tertiary">Join the momevement</h3> -->
+        <!-- Replace with your Access Key -->
+        <input
+          type="hidden"
+          name="access_key"
+          value="3a00c6b9-61ce-4846-a7cc-b9e858e9230a"
+        />
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+          autocomplete="name"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          autocomplete="email"
+        />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Your Message"
+          required
+        ></textarea>
+        <button type="submit" onclick="">Send</button>
+      </form>
+    </section>
+
+    <footer class="copyright">
+      <p>Copyright © 2025 vortedge</p>
+    </footer>
   </body>
 </html>
