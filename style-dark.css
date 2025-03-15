@@ -21,9 +21,18 @@
   .business {
     background-image: radial-gradient(circle, #16161631 0%, transparent 20%), url(./assets/img/bg.svg);
   } 
-
+  .business-card {
+    background: #0b1c28;;
+  }
   .footnote {
     background: #ededed;
     color: #010101;
+  }
+
+  .logo{
+    display: none;
+  }
+  .logo-dark {
+    display: block;
   }
 }
