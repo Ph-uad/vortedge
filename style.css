@@ -79,7 +79,6 @@ p::first-letter {
   .heading-primary {
     font-size: 6.5rem;
   }
-  
 }
 
 .heading-secondary {
@@ -257,8 +256,8 @@ button:focus {
 
 @media (min-width: 768px) {
   .about-container {
-     display: flex;
-     flex-direction: row;
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -341,15 +340,13 @@ button:focus {
 }
 
 @media (min-width: 768px) {
-
-  .business{
-      padding: 15% 20%;
-      margin: 0 5rem;
+  .business {
+    padding: 15% 20%;
+    margin: 0 5rem;
   }
   .business-card {
     flex: 1 0 30%;
   }
-  
 }
 
 .business-card:hover {
@@ -441,11 +438,10 @@ button:focus {
   grid-row-gap: 1rem;
 }
 
-.form-grid > h3{
+.form-grid > h3 {
   grid-area: 1 / 1 / 4 / 3;
   text-align: center;
 }
-
 
 .form-grid > input,
 .form-grid > textarea,
@@ -482,12 +478,25 @@ footer {
   padding: 1.2%;
 }
 
+
 footer > p {
   color: var(--color-white);
   -webkit-filter: invert(100%);
   filter: invert(100%);
 }
 
-.logo-dark{
+.logo-dark {
   display: none;
+}
+
+
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer figure {
+    order: 4;
+    margin: 5rem auto 0 auto;
+  }
 }
