@@ -356,7 +356,16 @@ button:focus {
 }
 
 .business-card > div {
+  /* background: red !important; */
+  height: 100%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.business-card:nth-child(1) > div > p{
+  flex: 0 1 60%; 
 }
 
 .business-card > div > h2::first-letter {

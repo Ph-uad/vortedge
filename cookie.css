@@ -1,0 +1,73 @@
+#consentBox {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 30rem;
+    z-index: 1000;
+}
+
+#consentBox.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+::selection {
+    color: #fff;
+    background: #229a0f;
+}
+
+#consentContent p {
+    color: #858585;
+    margin: 10px 0 20px 0;
+    font-size: .7rem;
+}
+
+#consentContent .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.consentButton,
+.rejectButton {
+    padding: 12px 30px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.consentButton {
+    background: var(--primary);
+    margin-right: 10px;
+}
+
+.rejectButton {
+    color: #111211;
+    background: transparent;
+    border: 2px solid var(--primary);
+    text-decoration: none;
+}
+
+#consentBox img {
+    max-width: 90px;
+}
+
+#consentHeader {
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+}
