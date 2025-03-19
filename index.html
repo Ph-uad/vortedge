@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="style-dark.css" />
     <link rel="stylesheet" href="cookie.css" />
-    <link rel="shortcut icon" href="./assets/img/thumbnail.jpg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/img/thumbnail.jpg"
+      type="image/x-icon"
+    />
     <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
@@ -20,23 +24,10 @@
     />
   </head>
 
-  <body>
-    <!-- <div id="consentBox">
-      <img src="./assets/img/thumbnail.jpg" alt="Logo" />
-      <div id="consentContent">
-        <header id="consentHeader">Cookies: The choice is yours</header>
-        <p>
-          We use cookies to make our site work well for you and so we can
-          continually improve it.
-          <br />The cookies that are necessary to keep the site functioning are
-          always on
-        </p>
-        <div class="buttons">
-          <button class="consentButton">Accept Cookies</button>
-          <button class="rejectButton">Reject</button>
-        </div>
-      </div>
-    </div> -->
+  <body class="" id="home">
+
+
+
     <!-- Navigation -->
     <nav class="container-fluid nav">
       <a href="" class="links vortedge">
@@ -44,7 +35,7 @@
       </a>
 
       <a href="#contact" role="nav-link" class="links">
-        <span> STEAM UP </span> White paper</a
+        <span> STEAM UP </span> White Paper</a
       >
     </nav>
 
@@ -72,7 +63,7 @@
             processing—enabling healthcare, robotics, and next-gen factories to
             operate faster, smarter, and more efficiently. <br />
             <br />
-            We are also committed to STEAM-based youth empowerment, equipping
+            We are also committed to STEAM based youth empowerment, equipping
             the next generation with cutting-edge skills to drive semiconductor
             advancements and shape the future of technology.
           </p>
@@ -99,9 +90,9 @@
     <section class="business">
       <div class="business-card">
         <div class="">
-          <h2 class="heading-secondary">What is STEAM UP ?</h2>
+          <h2 class="heading-secondary">What is STEAM UP?</h2>
           <p>
-            The <em>STEAM UP</em> Initiative is a workforce development program
+            The <strong>STEAM UP</strong> Initiative is a workforce development program
             designed to address the critical shortage of AI and semiconductor
             professionals in the U.S. and globally
           </p>
@@ -110,7 +101,7 @@
 
       <div class="business-card">
         <div class="">
-          <h2 class="heading-secondary">Why underepresented communities ?</h2>
+          <h2 class="heading-secondary">Why <strong>STEAM UP</strong>?</h2>
           <ul>
             <li>
               <p>191% Growth in AI Apprenticeships</p>
@@ -159,11 +150,12 @@
       </div>
     </section>
 
+    <!-- Gallery Section -->
     <section class="gallery">
       <div class="gallery-container">
         <div class="gallery-grid">
           <figure>
-            <img src="./assets/img/g3.webp" alt="" />
+            <img src="./assets/img/g3.webp" alt="" draggable="false"  />
           </figure>
           <figure>
             <img src="./assets/img/g4.webp" alt="" />
@@ -180,6 +172,8 @@
       </div>
     </section>
 
+    <!-- Footer Section -->
+    <!-- Footnote -->
     <section class="footnote">
       <p>Transform industries with</p>
       <p>
@@ -190,11 +184,13 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="footer flex" id="contact">
+    <section class="contact flex" id="contact">
       <figure>
-        <img src="./assets/img/logo.png" alt="" class="logo" />
-        <img src="./assets/img/logo-dark.png" alt="" class="logo-dark" />
-        <!-- <figcaption>Logo</figcaption> -->
+        <a href="#home">
+          <img src="./assets/img/logo.png" alt="" class="logo" />
+          <img src="./assets/img/logo-dark.png" alt="" class="logo-dark" />
+          <!-- <figcaption>Logo</figcaption> -->
+        </a>
       </figure>
 
       <form
@@ -241,7 +237,23 @@
       <p>Copyright © 2025 vortedge</p>
     </footer>
 
-  
-    <!-- <script src="script.js"></script> -->
+    <div id="consentBox">
+      <img src="./assets/img/thumbnail.jpg" alt="Logo" />
+      <div id="consentContent">
+        <header id="consentHeader">Cookies: The choice is yours</header>
+        <p>
+          We use cookies to make our site work well for you and so we can
+          continually improve it.
+          <br />The cookies that are necessary to keep the site functioning are
+          always on
+        </p>
+        <div class="buttons">
+          <button class="consentButton">Accept Cookies</button>
+          <button class="rejectButton">Reject</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
