@@ -236,8 +236,8 @@ button:focus {
 
 .header-container {
   max-width: 50rem;
-  margin: auto auto 10% auto;
-  text-align: left;
+  margin: auto auto 35% auto;
+  text-align: right;
 }
 
 .header-container > h1 {
