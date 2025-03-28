@@ -9,7 +9,7 @@
   }
 
   .header {
-    background: top top/contain no-repeat fixed;
+    background: top left/cover no-repeat;
     background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.8)), url(./assets/img/hero-dark.webp);
   }
 
@@ -18,9 +18,6 @@
       background: top center/cover no-repeat;
       background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.8)),
         url(./assets/img/hero-dark.webp);
-    }
-    .header-container {
-      text-align: left;
     }
   }
 
