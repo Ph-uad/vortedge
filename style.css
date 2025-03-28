@@ -232,12 +232,11 @@ button:focus {
   align-items: center;
   padding: 0 10%;
   margin: 0%;
-
 }
 
 .header-container {
   max-width: 50rem;
-  margin: auto auto 10% auto ;
+  margin: auto auto 10% auto;
   text-align: left;
 }
 
@@ -256,7 +255,12 @@ button:focus {
       url(./assets/img/hero.webp);
   }
   .header-container {
+    margin: auto;
     text-align: center;
+  }
+
+  .header-container > h1 {
+    margin-bottom: 4%;
   }
 }
 
