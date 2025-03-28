@@ -237,13 +237,13 @@ button:focus {
 
 .header-container {
   max-width: 50rem;
-  margin: auto;
-  text-align: center;
+  margin: auto auto 10% auto ;
+  text-align: left;
 }
 
 .header-container > h1 {
   color: var(--color-white) !important;
-  margin-bottom: 2.5%;
+  margin-bottom: 10%;
 }
 
 @media (min-width: 768px) {
