@@ -8,10 +8,20 @@
     background: #0b1c28;
   }
 
-  .header{
+  .header {
     background: top center/cover no-repeat fixed;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.8)),
-      url(./assets/img/hero-dark.webp);
+    background-image: url(./assets/img/hero-dark.webp);
+  }
+
+  @media (min-width: 768px) {
+    .header {
+      background: top center/cover no-repeat;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.8)),
+        url(./assets/img/hero-dark.webp);
+    }
+    .header-container {
+      text-align: left;
+    }
   }
 
   .header-container > div {
@@ -19,17 +29,18 @@
   }
 
   .business {
-    background-image: radial-gradient(circle, #16161631 0%, transparent 20%), url(./assets/img/bg.svg);
-  } 
+    background-image: radial-gradient(circle, #16161631 0%, transparent 20%),
+      url(./assets/img/bg.svg);
+  }
   .business-card {
-    background: #0b1c28;;
+    background: #0b1c28;
   }
   .footnote {
     background: #ededed;
     color: #010101;
   }
 
-  .logo{
+  .logo {
     display: none;
   }
   .logo-dark {

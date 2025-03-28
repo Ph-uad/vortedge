@@ -46,7 +46,9 @@ h6 {
   line-height: 1.4;
 }
 
-
+p {
+  font-size: 1.2rem;
+}
 
 .offset-header {
   position: relative;
@@ -99,6 +101,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  pointer-events: none;
 }
 
 [role="button"],
@@ -222,7 +225,7 @@ button:focus {
 .header {
   height: 100vh;
   width: 100vw;
-  background: top center/cover no-repeat;
+  background: bottom center/cover no-repeat;
   background-image: linear-gradient(rgba(0, 0, 0, 0.279), rgba(0, 0, 0, 0.878)),
     url(./assets/img/hero.webp);
   display: flex;
@@ -239,6 +242,20 @@ button:focus {
 
 .header-container > h1 {
   color: var(--color-white) !important;
+}
+
+@media (min-width: 768px) {
+  .header {
+    background: bottom right/cover no-repeat;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.279),
+        rgba(0, 0, 0, 0.878)
+      ),
+      url(./assets/img/hero.webp);
+  }
+  .header-container {
+    text-align: left;
+  }
 }
 
 /*  --------------------- */
@@ -364,8 +381,9 @@ button:focus {
   justify-content: space-between;
 }
 
-.business-card:nth-child(1) > div > p{
-  flex: 0 1 60%; 
+.business-card:nth-child(1) > div > p {
+  flex: 0 1 60%;
+  padding-top: 5%;
 }
 
 .business-card > div > h2::first-letter {
@@ -421,20 +439,23 @@ button:focus {
   /* color: #b2b2b2; */
 }
 
-.footnote p {
+.contact p {
   font-size: 2rem;
 }
 
-.footer {
+/*  --------------------- */
+/* |  contact  section   |*/
+/*  --------------------- */
+.contact {
   padding: 10%;
   align-items: flex-start;
 }
 
-.footer > figure {
+.contact > figure {
   flex: 0 0 20%;
   max-width: 10rem;
 }
-.footer > figure > img {
+.contact > figure > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -479,16 +500,32 @@ button:focus {
   grid-area: 4 / 1 / 4 / 3;
 }
 
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+  }
+  .contact figure {
+    order: 4;
+    margin: 5rem auto 0 auto;
+  }
+  .form-grid {
+    margin: center;
+  }
+}
+
+.logo-dark {
+  display: none;
+}
+
 /*  --------------------- */
-/* |      footnote       |*/
+/* |      footer         |*/
 /*  --------------------- */
 
 footer {
   text-align: center;
   background: #f4f4f4;
-  padding: 1.2%;
+  padding: 0.4%;
 }
-
 
 footer > p {
   color: var(--color-white);
@@ -496,18 +533,6 @@ footer > p {
   filter: invert(100%);
 }
 
-.logo-dark {
-  display: none;
-}
-
-
-
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-  }
-  .footer figure {
-    order: 4;
-    margin: 5rem auto 0 auto;
-  }
+.copyright > p {
+  font-size: x-small;
 }
