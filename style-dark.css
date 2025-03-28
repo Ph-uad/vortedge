@@ -9,9 +9,8 @@
   }
 
   .header {
-    background: center center/cover no-repeat fixed;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.8)),
-      url(./assets/img/hero-dark.webp);
+    background: top center/cover no-repeat fixed;
+    background-image: url(./assets/img/hero-dark.webp);
   }
 
   @media (min-width: 768px) {
