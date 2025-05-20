@@ -454,7 +454,8 @@ button:focus {
 /*  --------------------- */
 .contact {
   padding: 10%;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact > figure {
