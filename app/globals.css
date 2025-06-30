@@ -41,8 +41,25 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }
-
 
 :root {
   --radius: 0.625rem;
@@ -81,7 +98,7 @@
 
 .dark {
   --background: oklch(0.145 0 0);
-  --foreground: #E0DED6;
+  --foreground: #e0ded6;
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -113,7 +130,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -123,7 +139,6 @@
   }
   body {
     @apply bg-background text-foreground;
-  
   }
 }
 
@@ -134,14 +149,15 @@
 } */
 
 h1,
-h2 {
+h2,
+.special {
   font-family: var(--font-lancelot);
 }
 
 .marquee {
-  display: flex;
+  /* display: flex; */
   /* overflow-x: hidden; */
-  position: relative;
+  /* position: relative; */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -156,8 +172,8 @@ h2 {
   /* gap: 5rem; */
   background-clip: text;
 
-  -webkit-animation: scroll 25s linear infinite;
-  animation: scroll 25s linear infinite;
+  /* -webkit-animation: scroll 25s linear infinite;
+  animation: scroll 25s linear infinite; */
 }
 
 .marquee--scroll > li {
@@ -167,14 +183,14 @@ h2 {
 
 .animate-logo-up {
   animation: animate-logo-up 0.5s ease-in-out forwards;
-} 
+}
 
 @keyframes animate-logo-up {
   0% {
     transform: translateY(0);
     opacity: 1;
   }
- 
+
   100% {
     transform: translateY(-40vh);
     opacity: 0.1;
@@ -209,5 +225,43 @@ h2 {
   }
   100% {
     transform: translateX(calc(-320% - 5rem));
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.path path {
+  fill: transparent;
+  stroke: rgba(0, 0, 0, 0.332);
+
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: dash 25s infinite;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 2;
+
+  }
+  25% {
+    stroke-dashoffset: 50;
+
+  }
+  75% {
+    stroke-dashoffset: 100;
+
+  }
+  100% {
+    stroke-dashoffset: 2;
+
   }
 }

@@ -19,7 +19,7 @@ const lancelot = Lancelot({
 });
 
 export const metadata: Metadata = {
-  title: "Vortedge",
+  title: "VortEdge",
   description: " Partnership that gives you an edge.",
 };
 
